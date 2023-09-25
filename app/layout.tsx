@@ -1,3 +1,4 @@
+// "use client"
 import "@/styles/globals.css"
 import { Metadata } from "next"
 
@@ -7,6 +8,9 @@ import { cn } from "@/lib/utils"
 import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
+import { Toaster } from "@/components/ui/toaster"
+import tosteer from "@/components/tosteer"
+import Tosteer from "@/components/tosteer"
 
 export const metadata: Metadata = {
   title: {
@@ -43,10 +47,15 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <div className="relative flex min-h-screen flex-col">
               <SiteHeader />
-              <div className="flex-1">{children}</div>
+              <div className="flex">
+                 <div  className="  ml-15%" >{children}</div></div>
+
+                <Tosteer/>
             </div>
+
             <TailwindIndicator />
           </ThemeProvider>
+
         </body>
       </html>
     </>
