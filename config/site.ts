@@ -14,5 +14,6 @@ export const siteConfig = {
     twitter: "https://twitter.com/knobodykares",
     github: "https://github.com/regnna",
     docs: "https://ui.shadcn.com",
+    leetcode:"https://leetcode.com/Regnna/"
   },
 }
